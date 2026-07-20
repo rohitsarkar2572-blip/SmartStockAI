@@ -33,3 +33,10 @@ def home():
         "database": db.name
     }
 
+@app.get("/test")
+def test():
+    return {"message": "Test route working"}
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
